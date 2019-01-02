@@ -882,14 +882,56 @@ p {
     height: 280px;
     position: relative;
     overflow: hidden; }
-    .work .work-lists .item:hover .thumbnail {
+    .work .work-lists .item.is-popup-active .desc-popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 500; }
+      .work .work-lists .item.is-popup-active .desc-popup:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: -1; }
+      .work .work-lists .item.is-popup-active .desc-popup .inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate -50%, -50%;
+        z-index: 10;
+        width: 400px;
+        height: 200px;
+        background: #fff;
+        box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15); }
+        .work .work-lists .item.is-popup-active .desc-popup .inner .description {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: left;
+          padding: 30px; }
+          .work .work-lists .item.is-popup-active .desc-popup .inner .description h3 a {
+            color: #000; }
+          .work .work-lists .item.is-popup-active .desc-popup .inner .description .info {
+            color: #414141; }
+          .work .work-lists .item.is-popup-active .desc-popup .inner .description .detail, .work .work-lists .item.is-popup-active .desc-popup .inner .description .btn-more {
+            display: block; }
+            .work .work-lists .item.is-popup-active .desc-popup .inner .description .detail .detail, .work .work-lists .item.is-popup-active .desc-popup .inner .description .btn-more .detail {
+              color: #414141;
+              font-size: 14px;
+              font-weight: 300; }
+    .work .work-lists .item.is-popup-active:hover .thumbnail {
       box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
       transform: scale(1.1); }
-      .work .work-lists .item:hover .thumbnail:before {
+      .work .work-lists .item.is-popup-active:hover .thumbnail:before {
         opacity: 0; }
-    .work .work-lists .item:hover .description {
+    .work .work-lists .item.is-popup-active:hover .description {
       display: none; }
-    .work .work-lists .item .thumbnail {
+    .work .work-lists .item.is-popup-active .thumbnail {
       display: block;
       height: 100%;
       background: 50% /cover no-repeat;
@@ -899,7 +941,7 @@ p {
       -ms-transition: .9s, transform 3s;
       -o-transition: .9s, transform 3s;
       transition: .9s, transform 3s; }
-      .work .work-lists .item .thumbnail:before {
+      .work .work-lists .item.is-popup-active .thumbnail:before {
         content: '';
         position: absolute;
         top: 0;
@@ -912,19 +954,19 @@ p {
         -ms-transition: .6s;
         -o-transition: .6s;
         transition: .6s; }
-      .work .work-lists .item .thumbnail.thumb-1 {
+      .work .work-lists .item.is-popup-active .thumbnail.thumb-1 {
         background-image: url("http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png"); }
-      .work .work-lists .item .thumbnail.thumb-2 {
+      .work .work-lists .item.is-popup-active .thumbnail.thumb-2 {
         background-image: url("http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png"); }
-      .work .work-lists .item .thumbnail.thumb-3 {
+      .work .work-lists .item.is-popup-active .thumbnail.thumb-3 {
         background-image: url("http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png"); }
-      .work .work-lists .item .thumbnail.thumb-4 {
+      .work .work-lists .item.is-popup-active .thumbnail.thumb-4 {
         background-image: url("http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png"); }
-      .work .work-lists .item .thumbnail.thumb-5 {
+      .work .work-lists .item.is-popup-active .thumbnail.thumb-5 {
         background-image: url("http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png"); }
-      .work .work-lists .item .thumbnail.thumb-6 {
+      .work .work-lists .item.is-popup-active .thumbnail.thumb-6 {
         background-image: url("http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png"); }
-    .work .work-lists .item .description {
+    .work .work-lists .item.is-popup-active .description {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -934,17 +976,19 @@ p {
       flex-direction: column;
       justify-content: center;
       padding: 0 18px; }
-      .work .work-lists .item .description h3 a {
+      .work .work-lists .item.is-popup-active .description h3 a {
         font-size: 18px;
         color: #fff;
         margin-bottom: 8px;
         text-transform: capitalize;
         font-weight: 400; }
-      .work .work-lists .item .description p {
+      .work .work-lists .item.is-popup-active .description .info {
         font-size: 14px;
         color: #ffffff;
         opacity: .8;
         font-weight: 300; }
+      .work .work-lists .item.is-popup-active .description .detail, .work .work-lists .item.is-popup-active .description .btn-more {
+        display: none; }
 
 .contact {
   padding: 100px;
@@ -1102,14 +1146,56 @@ p {
     height: 280px;
     position: relative;
     overflow: hidden; }
-    .work .work-lists .item:hover .thumbnail {
+    .work .work-lists .item.is-popup-active .desc-popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 500; }
+      .work .work-lists .item.is-popup-active .desc-popup:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: -1; }
+      .work .work-lists .item.is-popup-active .desc-popup .inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate -50%, -50%;
+        z-index: 10;
+        width: 400px;
+        height: 200px;
+        background: #fff;
+        box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15); }
+        .work .work-lists .item.is-popup-active .desc-popup .inner .description {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: left;
+          padding: 30px; }
+          .work .work-lists .item.is-popup-active .desc-popup .inner .description h3 a {
+            color: #000; }
+          .work .work-lists .item.is-popup-active .desc-popup .inner .description .info {
+            color: #414141; }
+          .work .work-lists .item.is-popup-active .desc-popup .inner .description .detail, .work .work-lists .item.is-popup-active .desc-popup .inner .description .btn-more {
+            display: block; }
+            .work .work-lists .item.is-popup-active .desc-popup .inner .description .detail .detail, .work .work-lists .item.is-popup-active .desc-popup .inner .description .btn-more .detail {
+              color: #414141;
+              font-size: 14px;
+              font-weight: 300; }
+    .work .work-lists .item.is-popup-active:hover .thumbnail {
       box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
       transform: scale(1.1); }
-      .work .work-lists .item:hover .thumbnail:before {
+      .work .work-lists .item.is-popup-active:hover .thumbnail:before {
         opacity: 0; }
-    .work .work-lists .item:hover .description {
+    .work .work-lists .item.is-popup-active:hover .description {
       display: none; }
-    .work .work-lists .item .thumbnail {
+    .work .work-lists .item.is-popup-active .thumbnail {
       display: block;
       height: 100%;
       background: 50% /cover no-repeat;
@@ -1119,7 +1205,7 @@ p {
       -ms-transition: .9s, transform 3s;
       -o-transition: .9s, transform 3s;
       transition: .9s, transform 3s; }
-      .work .work-lists .item .thumbnail:before {
+      .work .work-lists .item.is-popup-active .thumbnail:before {
         content: '';
         position: absolute;
         top: 0;
@@ -1132,19 +1218,19 @@ p {
         -ms-transition: .6s;
         -o-transition: .6s;
         transition: .6s; }
-      .work .work-lists .item .thumbnail.thumb-1 {
+      .work .work-lists .item.is-popup-active .thumbnail.thumb-1 {
         background-image: url("http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png"); }
-      .work .work-lists .item .thumbnail.thumb-2 {
+      .work .work-lists .item.is-popup-active .thumbnail.thumb-2 {
         background-image: url("http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png"); }
-      .work .work-lists .item .thumbnail.thumb-3 {
+      .work .work-lists .item.is-popup-active .thumbnail.thumb-3 {
         background-image: url("http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png"); }
-      .work .work-lists .item .thumbnail.thumb-4 {
+      .work .work-lists .item.is-popup-active .thumbnail.thumb-4 {
         background-image: url("http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png"); }
-      .work .work-lists .item .thumbnail.thumb-5 {
+      .work .work-lists .item.is-popup-active .thumbnail.thumb-5 {
         background-image: url("http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png"); }
-      .work .work-lists .item .thumbnail.thumb-6 {
+      .work .work-lists .item.is-popup-active .thumbnail.thumb-6 {
         background-image: url("http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png"); }
-    .work .work-lists .item .description {
+    .work .work-lists .item.is-popup-active .description {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -1154,17 +1240,19 @@ p {
       flex-direction: column;
       justify-content: center;
       padding: 0 18px; }
-      .work .work-lists .item .description h3 a {
+      .work .work-lists .item.is-popup-active .description h3 a {
         font-size: 18px;
         color: #fff;
         margin-bottom: 8px;
         text-transform: capitalize;
         font-weight: 400; }
-      .work .work-lists .item .description p {
+      .work .work-lists .item.is-popup-active .description .info {
         font-size: 14px;
         color: #ffffff;
         opacity: .8;
         font-weight: 300; }
+      .work .work-lists .item.is-popup-active .description .detail, .work .work-lists .item.is-popup-active .description .btn-more {
+        display: none; }
 
 .contact {
   padding: 100px;

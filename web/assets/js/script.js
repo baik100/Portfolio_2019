@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 $(document).ready(function() {
 
 
@@ -13,11 +5,11 @@ $(document).ready(function() {
      *  UI 스크립트
      */
 
-    portFolio.init()
+    portFolio.init();
 
 
     /**
-     *v lib
+     * lib
      */
 
     lib.init();
@@ -36,6 +28,7 @@ var portFolio ={
         portFolio.visualAnim();
         portFolio.preLoader();
         portFolio.responsiveReset();
+        portFolio.workPopup();
     },
 
     responsiveReset: function(){
@@ -111,10 +104,21 @@ var portFolio ={
             const sct = $(window).scrollTop();
             $('.visual').css({backgroundSize: 100 + sct / 100  +"%"})
             $('.visual h3 , .visual p').css({opacity: 1 - sct /300})
-            $('.visual .text').css({transform: "translateY("
-                    + sct / 3 + "px)"})
+            $('.visual .text').css({transform: "translateY(" + sct / 3 + "px)"})
         })
     },
+
+    workPopup: function () {
+        const workItem = $('.work .item');
+
+        workItem.on('click',function () {
+            const self = $(this);
+            self.addClass('is-popup-active').siblings().removeClass('is-popup-active');
+        });
+        $('.btn-close').on('click',function () {
+            $('html,body').removeClass('is-popup-active');
+        });
+    }
 };
 
 const lib = {

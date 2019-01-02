@@ -77,85 +77,145 @@
             height: 280px;
             position: relative;
             overflow: hidden;
-            &:hover {
-                .thumbnail {
-                    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
-                    transform: scale(1.1);
-                    &:before {
-                        opacity: 0;
-                    }
-                }
-                .description {
-                    display: none;
-                }
-            }
-            .thumbnail {
-                display: block;
-                height: 100%;
-                background: 50% /cover no-repeat;
-                position: relative;
-                -webkit-transition:  .9s, transform 3s;
-                -moz-transition:  .9s, transform 3s;
-                -ms-transition:  .9s, transform 3s;
-                -o-transition:  .9s, transform 3s;
-                transition:  .9s, transform 3s;
-                &:before {
-                    content: '';
-                    position: absolute;
+            &.is-popup-active {
+                .desc-popup {
+                    position: fixed;
                     top: 0;
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    background: rgba(0, 0, 0, 0.6);
-                    -webkit-transition:  .6s;
-                    -moz-transition:  .6s;
-                    -ms-transition:  .6s;
-                    -o-transition:  .6s;
-                    transition:  .6s;
-                }
-                &.thumb-1 {
-                    background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
-                }
-                &.thumb-2 {
-                    background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
-                }
-                &.thumb-3 {
-                    background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
-                }
-                &.thumb-4 {
-                    background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
-                }
-                &.thumb-5 {
-                    background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
-                }
-                &.thumb-6 {
-                    background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
-                }
-            }
-            .description {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: 70px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                padding: 0 18px;
-                h3 {
-                    a {
-                        font-size: 18px;
-                        color: #fff;
-                        margin-bottom: 8px;
-                        text-transform: capitalize;
-                        font-weight: 400;
+                    z-index: 500;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(0, 0, 0, 0.8);
+                        z-index: -1;
+                    }
+                    .inner {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate (-50%, -50%);
+                        z-index: 10;
+                        width: 400px;
+                        height: 200px;
+                        background: #fff;
+                        box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
+                        .description {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: left;
+                            padding: 30px;
+                            h3 {
+                                a {
+                                    color: #000;
+                                }
+                            }
+                            .info {
+                                color: #414141;
+                            }
+                            .detail, .btn-more {
+                                display: block;
+                                .detail {
+                                    color: #414141;
+                                    font-size: 14px;
+                                    font-weight: 300;
+                                }
+                                .btn-more {
+                                    
+                                }
+                            }
+                        }
                     }
                 }
-                p {
-                    font-size: 14px;
-                    color: #ffffff;
-                    opacity: .8;
-                    font-weight: 300;
+                &:hover {
+                    .thumbnail {
+                        box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
+                        transform: scale(1.1);
+                        &:before {
+                            opacity: 0;
+                        }
+                    }
+                    .description {
+                        display: none;
+                    }
+                }
+                .thumbnail {
+                    display: block;
+                    height: 100%;
+                    background: 50% /cover no-repeat;
+                    position: relative;
+                    -webkit-transition: .9s, transform 3s;
+                    -moz-transition: .9s, transform 3s;
+                    -ms-transition: .9s, transform 3s;
+                    -o-transition: .9s, transform 3s;
+                    transition: .9s, transform 3s;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(0, 0, 0, 0.6);
+                        -webkit-transition: .6s;
+                        -moz-transition: .6s;
+                        -ms-transition: .6s;
+                        -o-transition: .6s;
+                        transition: .6s;
+                    }
+                    &.thumb-1 {
+                        background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
+                    }
+                    &.thumb-2 {
+                        background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
+                    }
+                    &.thumb-3 {
+                        background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
+                    }
+                    &.thumb-4 {
+                        background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
+                    }
+                    &.thumb-5 {
+                        background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
+                    }
+                    &.thumb-6 {
+                        background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
+                    }
+                }
+                .description {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 70px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 0 18px;
+                    h3 {
+                        a {
+                            font-size: 18px;
+                            color: #fff;
+                            margin-bottom: 8px;
+                            text-transform: capitalize;
+                            font-weight: 400;
+                        }
+                    }
+                    .info {
+                        font-size: 14px;
+                        color: #ffffff;
+                        opacity: .8;
+                        font-weight: 300;
+                    }
+                    .detail, .btn-more {
+                        display: none;
+                    }
                 }
             }
         }
@@ -216,3 +276,4 @@
         }
     }
 }
+
