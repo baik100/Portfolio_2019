@@ -59,7 +59,7 @@ var portFolio ={
 
     spyScroll: function () {
         $('.nav-link').on("click",function () {
-            var self = $(this),
+            const self = $(this),
                 dataNav = self.data('nav');
 
             // 예외처리
@@ -68,11 +68,14 @@ var portFolio ={
             }
 
             console.log($(dataNav).offset());
-            var oft = $(dataNav).offset().top;
+            const oft = $(dataNav).offset().top;
 
-            $('html,body').animate({scrollTop: oft})
+            $('html,body').animate({scrollTop: oft});
+
+            // 클래스추가
+            $('.nav-link').removeClass('on');
+            self.addClass('on').silbings().removeClass('on');
         })
-
     },
 
     sideMenu : function () {
@@ -83,7 +86,6 @@ var portFolio ={
         $(".btn-close").click(function () {
             $("html").removeClass("is-sideopen");
         })
-
     },
 
     anim: function () {
