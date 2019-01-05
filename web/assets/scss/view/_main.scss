@@ -3,26 +3,145 @@
 */
 
 .visual {
-    height: calc(100vh - 60px);
-    min-height: 500px;
-    .vs-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('https://images.unsplash.com/photo-1510020553968-30f966e1ec9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80') 0% 0% / cover no-repeat;
-        &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
+  height: calc(100vh - 60px);
+  min-height: 500px;
+  .vs-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1510020553968-30f966e1ec9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80') 0% 0% / cover no-repeat;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+  .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    h2 {
+      font-size: 50px;
+      color: #ffffff;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    p {
+      font-size: 24px;
+      color: #ffffff;
+      font-weight: 300;
+      opacity: .5;
+      white-space: nowrap;
+    }
+  }
+}
+
+//section-common
+
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.work {
+  padding: 100px 0;
+  .container {
+    max-width: 1300px;
+  }
+  .work-lists {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        width: 33.33%;
+        padding: 15px;
+      }
+    }
+    .item {
+      height: 280px;
+      position: relative;
+      overflow: hidden;
+      &.is-popup-active {
+        .btn-more {
+          display: block;
         }
-     }
-    .slogan {
+      }
+      &:hover {
+        .thumbnail {
+          box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
+          transform: scale(1.1);
+          &:before {
+            opacity: 0;
+          }
+        }
+        .description {
+          display: none;
+        }
+        .btn-more {
+          display: block;
+        }
+      }
+      .thumbnail {
+        display: block;
+        height: 100%;
+        background: 50% /cover no-repeat;
+        position: relative;
+        -webkit-transition: .9s, transform 3s;
+        -moz-transition: .9s, transform 3s;
+        -ms-transition: .9s, transform 3s;
+        -o-transition: .9s, transform 3s;
+        transition: .9s, transform 3s;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.6);
+          -webkit-transition: .6s;
+          -moz-transition: .6s;
+          -ms-transition: .6s;
+          -o-transition: .6s;
+          transition: .6s;
+        }
+        &.thumb-1 {
+          background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
+        }
+        &.thumb-2 {
+          background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
+        }
+        &.thumb-3 {
+          background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
+        }
+        &.thumb-4 {
+          background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
+        }
+        &.thumb-5 {
+          background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
+        }
+        &.thumb-6 {
+          background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
+        }
+      }
+      .btn-more {
+        display: none;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -31,249 +150,91 @@
         -ms-transform: translate(-50%,-50%);
         -o-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
-        text-align: center;
-        h2 {
-            font-size: 50px;
-            color: #ffffff;
-            font-weight: 700;
-            white-space: nowrap;
+        background: #eee;
+        width: 500px;
+        height: 500px;
+        z-index: 100;
+      }
+      .desription {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 18px;
+        h3 {
+          font-size: 18px;
+          color: #fff;
+          margin-bottom: 5px;
+          text-transform: capitalize;
+          font-weight: 400;
         }
         p {
-            font-size: 24px;
-            color: #ffffff;
-            font-weight: 300;
-            opacity: .5;
-            white-space: nowrap;
+          font-size: 14px;
+          color: #ffffff;
+          opacity: .8;
+          font-weight: 300;
         }
+      }
     }
-}
-
-//section-common
-
-.section-title {
-    font-size: 30px;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 50px;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-.work {
-    padding: 100px 0;
-    .container {
-        max-width: 1300px;
-    }
-    .work-lists {
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            li {
-                width: 33.33%;
-                padding: 15px;
-            }
-        }
-        .item {
-            height: 280px;
-            position: relative;
-            overflow: hidden;
-            &.is-popup-active {
-                .desc-popup {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    z-index: 500;
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background: rgba(0, 0, 0, 0.8);
-                        z-index: -1;
-                    }
-                    .inner {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate (-50%, -50%);
-                        z-index: 10;
-                        width: 400px;
-                        height: 200px;
-                        background: #fff;
-                        box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
-                        .description {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            text-align: left;
-                            padding: 30px;
-                            h3 {
-                                a {
-                                    color: #000;
-                                }
-                            }
-                            .info {
-                                color: #414141;
-                            }
-                            .detail, .btn-more {
-                                display: block;
-                                .detail {
-                                    color: #414141;
-                                    font-size: 14px;
-                                    font-weight: 300;
-                                }
-                                .btn-more {
-                                    
-                                }
-                            }
-                        }
-                    }
-                }
-                &:hover {
-                    .thumbnail {
-                        box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
-                        transform: scale(1.1);
-                        &:before {
-                            opacity: 0;
-                        }
-                    }
-                    .description {
-                        display: none;
-                    }
-                }
-                .thumbnail {
-                    display: block;
-                    height: 100%;
-                    background: 50% /cover no-repeat;
-                    position: relative;
-                    -webkit-transition: .9s, transform 3s;
-                    -moz-transition: .9s, transform 3s;
-                    -ms-transition: .9s, transform 3s;
-                    -o-transition: .9s, transform 3s;
-                    transition: .9s, transform 3s;
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background: rgba(0, 0, 0, 0.6);
-                        -webkit-transition: .6s;
-                        -moz-transition: .6s;
-                        -ms-transition: .6s;
-                        -o-transition: .6s;
-                        transition: .6s;
-                    }
-                    &.thumb-1 {
-                        background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
-                    }
-                    &.thumb-2 {
-                        background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
-                    }
-                    &.thumb-3 {
-                        background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
-                    }
-                    &.thumb-4 {
-                        background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
-                    }
-                    &.thumb-5 {
-                        background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
-                    }
-                    &.thumb-6 {
-                        background-image: url('http://bcy0729.dothome.co.kr/port_/web/assets/img/marketer_1000.png');
-                    }
-                }
-                .description {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    height: 70px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    padding: 0 18px;
-                    h3 {
-                        a {
-                            font-size: 18px;
-                            color: #fff;
-                            margin-bottom: 8px;
-                            text-transform: capitalize;
-                            font-weight: 400;
-                        }
-                    }
-                    .info {
-                        font-size: 14px;
-                        color: #ffffff;
-                        opacity: .8;
-                        font-weight: 300;
-                    }
-                    .detail, .btn-more {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
+  }
 }
 
 .contact {
-    padding: 100px;
+  padding: 100px;
+  text-align: center;
+  .text {
     text-align: center;
-    .text {
-        text-align: center;
-        display: block;
-        input {
-            width: 70%;
-            height: 50px;
-            padding: 10px;
-            margin-bottom: 20px;
-            color: #000;
-            background: transparent;
-            border: none;
-            border-bottom: 1px solid #bdbdbd;
-            &:focus {
-                border-bottom: 1px solid #000;
-                outline: 0;
-            }
-        }
-        textarea {
-            width: 70%;
-            height: 260px;
-            padding: 10px;
-            margin-bottom: 20px;
-            color: #000;
-            background: transparent;
-            border: none;
-            border-bottom: 1px solid #bdbdbd;
-            &:focus {
-                border-bottom: 1px solid #000;
-                outline: 0;
-            }
-        }
-        button {
-            display: block;
-            width: 160px;
-            height: 50px;
-            border: 1px solid #414141;
-            line-height: 50px;
-            color: #414141;
-            font-size: 16px;
-            margin: 15px auto 0;
-            &:focus {
-                outline: 0;
-            }
-            &:hover {
-                border: 1px solid #3d98c2;
-                background: #3d98c2;
-                color: #fff;
-            }
-        }
+    display: block;
+    input {
+      width: 70%;
+      height: 50px;
+      padding: 10px;
+      margin-bottom: 20px;
+      color: #000;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #bdbdbd;
+      &:focus {
+        border-bottom: 1px solid #000;
+        outline: 0;
+      }
     }
+    textarea {
+      width: 70%;
+      height: 260px;
+      padding: 10px;
+      margin-bottom: 20px;
+      color: #000;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #bdbdbd;
+      &:focus {
+        border-bottom: 1px solid #000;
+        outline: 0;
+      }
+    }
+    button {
+      display: block;
+      width: 160px;
+      height: 50px;
+      border: 1px solid #414141;
+      line-height: 50px;
+      color: #414141;
+      font-size: 16px;
+      margin: 15px auto 0;
+      &:focus {
+        outline: 0;
+      }
+      &:hover {
+        border: 1px solid #3d98c2;
+        background: #3d98c2;
+        color: #fff;
+      }
+    }
+  }
 }
 
