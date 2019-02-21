@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
     <title>Baik Portfolio</title>
 
     <!--font awesome-->
@@ -23,6 +23,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
 
     <!--[if lt IE 9]-->
@@ -41,9 +42,9 @@
                 </a>
             </h1>
             <nav>
-                <a href="#!" class="nav-link menu-1" data-nav=".work">work</a>
+                <a href="#!" class="nav-link menu menu-1" data-nav=".work">works</a>
                 <a href="#!" class="nav-link menu-2" data-nav=".contact">contact</a>
-                <a href="https://github.com/baik100" target="_blank" class="nav-link menu-3">gitHub</a>
+                <a href="https://baik100.github.io" target="_blank" data-nav=".blog" class="nav-link menu-3">blog</a>
             </nav>
             <div class="btn-menu">
                 <img src="../assets/img/menu.svg" alt="메뉴열기버튼">
@@ -58,86 +59,167 @@
             <div class="vs-bg"></div>
             <div class="container">
                 <div class="slogan">
-                    <h2>Lorem ipsum dolor sit amet.</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, nobis?</p>
+                    <h2>Hellow World</h2>
+                    <p>Web publisher portfolio</p>
+                </div>
+                <div class="enabled-scroll">
+                    <i class="material-icons arrow-1">expand_more</i>
+                    <i class="material-icons arrow-2">expand_more</i>
+                    <i class="material-icons arrow-3">expand_more</i>
                 </div>
             </div>
         </section>
-        <section class="work">
+        <section class="work section">
             <div class="container">
-                <h2 class="section-title">Recent works</h2>
-                <div class="work-lists">
-                    <ul>
-                        <li>
-                            <div class="item">
-                                <a href="#!" class="thumbnail thumb-1"></a>
-                                <div class="description">
-                                    <h3><a href="#!">사이트 제목</a></h3>
-                                    <p>웹 ㅣ 모바일 ㅣ 반응형 ㅣ 유지보수</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item">
-                                <a href="#!" class="thumbnail thumb-2"></a>
-                                <div class="description">
-                                    <h3><a href="#!">사이트 제목</a></h3>
-                                    <p>웹 ㅣ 모바일 ㅣ 반응형 ㅣ 유지보수</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item">
-                                <a href="#!" class="thumbnail thumb-3"></a>
-                                <div class="description">
-                                    <h3><a href="#!">사이트 제목</a></h3>
-                                    <p>웹 ㅣ 모바일 ㅣ 반응형 ㅣ 유지보수</p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="item">
-                                <a href="#!" class="thumbnail thumb-4"></a>
-                                <div class="description">
-                                    <h3><a href="#!">사이트 제목</a></h3>
-                                    <p>웹 ㅣ 모바일 ㅣ 반응형 ㅣ 유지보수</p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="item">
-                                <a href="#!" class="thumbnail thumb-5"></a>
-                                <div class="description">
-                                    <h3><a href="#!">사이트 제목</a></h3>
-                                    <p>웹 ㅣ 모바일 ㅣ 반응형 ㅣ 유지보수</p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="item">
-                                <a href="#!" class="thumbnail thumb-6"></a>
-                                <div class="description">
-                                    <h3><a href="#!">사이트 제목</a></h3>
-                                    <p>웹 ㅣ 모바일 ㅣ 반응형 ㅣ 유지보수</p>
-                                </div>
-                            </div>
-                        </li>
+                <!--<h2 class="section-title">Works</h2>-->
+                <div class="desc-01">
+                    <div class="desc-subj">작업 사이트</div>
+                    <ul class="desc_ul">
+                        <li>최근 작업한 사이트입니다.</li>
                     </ul>
+                    <h2 class="work-title">Acer</h2>
+                    <table class="tbl">
+                        <colgroup>
+                            <col/>
+                            <col style="width:40%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Device</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="subj"><a href="http://bcy0729.dothome.co.kr/acer/web/public/main.html" target="_blank">Acer</a></td>
+                            <td>Responsive Web</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h2 class="work-title">AJ-yellow</h2>
+                    <table class="tbl">
+                        <colgroup>
+                            <col/>
+                            <col style="width:40%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Device</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="subj"><a href="http://bcy0729.dothome.co.kr/aj-yellow/web/public/main/main.html" target="_blank">AJ-yellow</a></td>
+                            <td>PC</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h2 class="work-title">Coupong</h2>
+                    <table class="tbl">
+                        <colgroup>
+                            <col/>
+                            <col style="width:40%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Device</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="subj"><a href="http://bcy0729.dothome.co.kr/cou/web/public/cou-randing.html" target="_blank">Coupong</a></td>
+                            <td>PC</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h2 class="work-title">Magazine</h2>
+                    <table class="tbl">
+                        <colgroup>
+                            <col/>
+                            <col style="width:40%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Device</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="subj"><a href="http://bcy0729.dothome.co.kr/magazine/web/public/main.html" target="_blank">Magazine</a></td>
+                            <td>Responsive Web</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
+                <!--<div class="desc-02">-->
+                    <!--<div class="desc-subj">운영 사이트</div>-->
+                    <!--<ul class="desc_ul">-->
+                        <!--<li>유지 / 보수 사이트입니다.</li>-->
+                    <!--</ul>-->
+                    <!--<h2 class="work-title">곰앤컴퍼니</h2>-->
+                    <!--<table class="tbl">-->
+                        <!--<colgroup>-->
+                            <!--<col/>-->
+                            <!--<col style="width:40%">-->
+                        <!--</colgroup>-->
+                        <!--<thead>-->
+                        <!--<tr>-->
+                            <!--<th>Title</th>-->
+                            <!--<th>Device</th>-->
+                        <!--</tr>-->
+                        <!--</thead>-->
+                        <!--<tbody>-->
+                        <!--<tr>-->
+                            <!--<td class="subj"><a href="http://www.gomtv.com" target="_blank">곰티비</a></td>-->
+                            <!--<td>PC<span>l</span>Mobile</td>-->
+                        <!--</tr>-->
+                        <!--</tbody>-->
+                        <!--<tbody>-->
+                        <!--<tr>-->
+                            <!--<td class="subj"><a href="https://www.kocowa.jp" target="_blank">KOCOWA</a></td>-->
+                            <!--<td>Responsive Web</td>-->
+                        <!--</tr>-->
+                        <!--</tbody>-->
+                        <!--<tbody>-->
+                        <!--<tr>-->
+                            <!--<td class="subj"><a href="http://mtest.gomtv.com/ui/ait/html/00_list.html" target="_blank">Ait</a></td>-->
+                            <!--<td>Responsive Web</td>-->
+                        <!--</tr>-->
+                        <!--</tbody>-->
+                    <!--</table>-->
+                    <!--<h2 class="work-title">썸에이지</h2>-->
+                    <!--<table class="tbl">-->
+                        <!--<colgroup>-->
+                            <!--<col/>-->
+                            <!--<col style="width:40%">-->
+                        <!--</colgroup>-->
+                        <!--<thead>-->
+                        <!--<tr>-->
+                            <!--<th>Title</th>-->
+                            <!--<th>Device</th>-->
+                        <!--</tr>-->
+                        <!--</thead>-->
+                        <!--<tbody>-->
+                        <!--<tr>-->
+                            <!--<td class="subj"><a href="https://www.dcunchained.com/kr/" target="_blank">DC Unchained</a></td>-->
+                            <!--<td>PC<span>l</span>Mobile</td>-->
+                        <!--</tr>-->
+                        <!--</tbody>-->
+                    <!--</table>-->
+                <!--</div>-->
             </div>
         </section>
-
-        <section class="contact">
+        <section class="contact section">
             <div class="container">
                 <h2 class="section-title">contact</h2>
                 <div class="text">
                     <form method="POST" action="https://formspree.io/bcy0729@naver.com">
-                        <input type="subject" name="subject" placeholder="Your Name">
-                        <input type="email" name="email" placeholder="Your Email">
-                        <textarea name="message" placeholder="Your Message"></textarea>
+                        <input type="subject" name="subject" placeholder="* Name">
+                        <input type="email" name="email" placeholder="* Email">
+                        <textarea name="message" placeholder="* Enter your message"></textarea>
                         <button type="submit">SEND</button>
                     </form>
                 </div>
@@ -149,6 +231,10 @@
                 <p>Copyright © by Baik chae yeon All rights reserved.</p>
             </div>
         </footer>
+
+        <div class="back-top">
+            <span>TOP</span>
+        </div>
     </main>
 </div>
 

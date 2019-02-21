@@ -11,10 +11,12 @@
   right: 0;
   z-index: 1000;
   height: 60px;
-  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
+  border-bottom: 1px solid #f1f1f1;
+  //box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
   @include screen-sm {
     height: 40px;
+    background-color: #f1f1f1;
   }
   .container {
     display: flex;
@@ -77,6 +79,11 @@
       min-width: 75px;
       margin-left: 11px;
       text-align: center;
+      &.menu-3 {
+        &:hover {
+          color: #000;
+        }
+      }
       @include screen-sm {
         font-size: 22px;
         opacity: 0;
