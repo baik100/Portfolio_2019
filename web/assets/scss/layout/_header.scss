@@ -2,6 +2,9 @@
 
 .fixed-header-padding {
   padding-top: 60px;
+  @include screen-sm {
+    padding-top: 40px;
+  }
 }
 
 .header {

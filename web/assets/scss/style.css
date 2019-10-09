@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto&display=swap");
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -187,6 +188,11 @@ img {
 :-ms-input-placeholder {
   color: #bbb; }
 
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-progress-appearance: none; }
+
 *::selection {
   background: #16b9ff;
   color: #fff; }
@@ -204,7 +210,8 @@ a {
     outline: 0; }
 
 body {
-  font-family: 'NanumSquare', 'Malgun Gothic', 'dotum', 'gulim' , 'sans-serif';
+  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Roboto', sans-serif;
   word-break: break-all;
   font-weight: 300;
   line-height: 1; }
@@ -674,6 +681,9 @@ p {
 /* Header */
 .fixed-header-padding {
   padding-top: 60px; }
+  @media only screen and (max-width: 767px) {
+    .fixed-header-padding {
+      padding-top: 40px; } }
 
 .header {
   position: fixed;
@@ -824,15 +834,15 @@ p {
  Main page style
 */
 .visual {
-  height: calc(100vh - 60px);
-  min-height: 500px; }
+  height: 400px;
+  position: relative; }
   .visual .vs-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("https://images.unsplash.com/photo-1510020553968-30f966e1ec9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80") 0% 0%/cover no-repeat; }
+    background: url("https://images.unsplash.com/photo-1510020553968-30f966e1ec9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80") 50% 20%/cover no-repeat; }
     @media only screen and (max-width: 767px) {
       .visual .vs-bg {
         background-position: 70% 50%; } }
@@ -954,9 +964,9 @@ p {
       text-align: center; }
   .work .work-title {
     font-size: 14px;
-    font-weight: 400;
-    color: #000;
-    padding: 30px 0 15px; }
+    font-weight: 600;
+    color: #222;
+    padding: 50px 0 10px; }
   .work .tbl {
     width: 100%; }
     .work .tbl th {
@@ -981,10 +991,11 @@ p {
     .work .tbl .subj {
       text-align: left;
       padding-left: 20px; }
+      .work .tbl .subj:hover a {
+        color: #3d98c2;
+        text-decoration: underline; }
       .work .tbl .subj a {
         color: #000; }
-        .work .tbl .subj a:hover {
-          color: #3d98c2; }
     .work .tbl .new {
       color: #3d98c2; }
 
@@ -1121,15 +1132,15 @@ p {
  Main page style
 */
 .visual {
-  height: calc(100vh - 60px);
-  min-height: 500px; }
+  height: 400px;
+  position: relative; }
   .visual .vs-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("https://images.unsplash.com/photo-1510020553968-30f966e1ec9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80") 0% 0%/cover no-repeat; }
+    background: url("https://images.unsplash.com/photo-1510020553968-30f966e1ec9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80") 50% 20%/cover no-repeat; }
     @media only screen and (max-width: 767px) {
       .visual .vs-bg {
         background-position: 70% 50%; } }
@@ -1251,9 +1262,9 @@ p {
       text-align: center; }
   .work .work-title {
     font-size: 14px;
-    font-weight: 400;
-    color: #000;
-    padding: 30px 0 15px; }
+    font-weight: 600;
+    color: #222;
+    padding: 50px 0 10px; }
   .work .tbl {
     width: 100%; }
     .work .tbl th {
@@ -1278,10 +1289,11 @@ p {
     .work .tbl .subj {
       text-align: left;
       padding-left: 20px; }
+      .work .tbl .subj:hover a {
+        color: #3d98c2;
+        text-decoration: underline; }
       .work .tbl .subj a {
         color: #000; }
-        .work .tbl .subj a:hover {
-          color: #3d98c2; }
     .work .tbl .new {
       color: #3d98c2; }
 

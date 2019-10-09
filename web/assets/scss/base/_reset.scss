@@ -54,6 +54,12 @@ img{vertical-align:top;max-width:100%;}
 ::-moz-placeholder{color:#bbb;}
 :-ms-input-placeholder{color:#bbb;}
 
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-progress-appearance: none;
+}
+
 *::selection{background:#16b9ff;color:#fff;}
 *::-moz-selection{background:#16b9ff;color:#fff}
 
